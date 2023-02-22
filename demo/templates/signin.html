@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signin</title>
+</head>
+<body>
+<h1>Sign In</h1>
+<form method="post">
+  {% csrf_token %}
+  Mobile: <input type="text" name="mobile"><br>
+  OTP: <input type="text" name="otp"><br>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<form method="post">
+  {% csrf_token %}
+  Mobile: <input type="text" name="mobile"><br>
+  OTP: <input type="text" name="otp"><br>
+  Name: <input type="text" name="name"><br>
+  <input type="submit" value="Sign Up">
+</form>
+</body>
+</html>

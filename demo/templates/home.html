@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Welcome, {{ name }}!</h1>
+
+	{% if message %}
+		<p>{{ message }}</p>
+	{% endif %}
+
+	{% if image %}
+		<img src="{{ image.url }}" alt="{{ image.name }}">
+		<form method="post">
+			{% csrf_token %}
+			<input type="hidden" name="name" value="{{ image.name }}">
+			<input type="submit" value="Reject">
+		</form>
+	{% else %}
+		<p>No more images.</p>
+	{% endif %}
+</body>
+
+
+
+
